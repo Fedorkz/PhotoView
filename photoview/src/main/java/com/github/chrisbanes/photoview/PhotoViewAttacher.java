@@ -515,6 +515,10 @@ public class PhotoViewAttacher implements View.OnTouchListener,
         matrix.set(mSuppMatrix);
     }
 
+    public Matrix getOriginalSuppMatrix() {
+        return mSuppMatrix;
+    }
+
     private Matrix getDrawMatrix() {
         mDrawMatrix.set(mBaseMatrix);
         mDrawMatrix.postConcat(mSuppMatrix);
@@ -565,7 +569,7 @@ public class PhotoViewAttacher implements View.OnTouchListener,
     /**
      * Helper method that simply checks the Matrix, and then displays the result
      */
-    private void checkAndDisplayMatrix() {
+    public void checkAndDisplayMatrix() {
         if (checkMatrixBounds()) {
             setImageViewMatrix(getDrawMatrix());
         }

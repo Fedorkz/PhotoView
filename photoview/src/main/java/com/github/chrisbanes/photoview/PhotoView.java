@@ -166,6 +166,10 @@ public class PhotoView extends AppCompatImageView {
         attacher.getSuppMatrix(matrix);
     }
 
+    public Matrix getOriginalSuppMatrix() {
+        return attacher.getOriginalSuppMatrix();
+    }
+
     public boolean setSuppMatrix(Matrix matrix) {
         return attacher.setDisplayMatrix(matrix);
     }
